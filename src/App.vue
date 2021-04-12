@@ -12,17 +12,15 @@
           <div class="navstrong">
 
             <li>
-              <router-link to="/listeOfPlayers">LISTE DES player</router-link>
+              <router-link to="/listeOfPlayers">LISTE DES players</router-link>
+            </li>
+            <li>
+              <router-link to="/addPlayers">ajouter DES players</router-link>
             </li>
 
           </div>
 
-          <li>
-            <a href="#" class="button button1">FRONTEND</a>
-          </li>
-          <li>
-            <a href="#" class="button button2">BACKEND</a>
-          </li>
+
         </nav>
 
       </div>

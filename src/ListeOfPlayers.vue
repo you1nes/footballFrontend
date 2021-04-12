@@ -19,6 +19,7 @@
           </tr>
           </thead>
           <tbody>
+
           <tr v-for="(player) in players">
             <td>
               {{ player.nom }}
@@ -60,7 +61,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "Listing",
+  name: "ListeOfPlayers",
   data() {
     return {
       players: [],
