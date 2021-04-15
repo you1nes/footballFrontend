@@ -1,9 +1,9 @@
 
 
 <template>
-  <div id="psgPage">
+  <div id="realMadridPage">
     <body>
-    <div class="container" id="psgPage">
+    <div class="container" id="realMadridPage">
       <br />
 
       <div class="main">
@@ -22,7 +22,7 @@
           </thead>
           <tbody v-for="(player) in players" :key="player.idPlayer">
 
-            <tr v-if="player.idTeam==1">
+            <tr v-if="player.idTeam==2">
             <td>
               {{ player.nom }}
             </td>
@@ -53,7 +53,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "psgPage",
+  name: "realMadridPage",
   data() {
     return {
       players: [],
