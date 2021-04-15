@@ -12,10 +12,16 @@
           <div class="navstrong">
 
             <li>
-              <router-link to="/listeOfPlayers">LISTE DES players</router-link>
+              <router-link to="/listeOfPlayers">Liste des players</router-link>
             </li>
             <li>
-              <router-link to="/addPlayers">ajouter DES players</router-link>
+              <router-link to="/addPlayers">Ajouter DES players</router-link>
+            </li>
+            <li>
+              <router-link to="/listeOfTeams">Liste des équipes</router-link>
+            </li>
+            <li>
+              <router-link to="/addTeams">Ajouter des équipes</router-link>
             </li>
 
           </div>

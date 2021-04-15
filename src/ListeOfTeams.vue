@@ -1,7 +1,7 @@
 <template>
-  <div id="ListeOfPlayers">
+  <div id = "ListeOfteams">
     <body>
-    <div class="container" id="ListeOfPlayers">
+    <div class="container" id="ListeOfTeams">
       <br />
 
       <div class="main">
@@ -11,40 +11,33 @@
         <table class="table table-fixed">
           <thead>
           <tr>
-            <th>Nom du player</th>
-            <th>Prenom du player</th>
-            <th>Age du player </th>
-            <th>nationalité </th>
-            <th>image</th>
+            <th>Nom de l'equipe</th>
+            <th>Pays </th>
+            <th>Stade </th>
+
           </tr>
           </thead>
           <tbody>
 
-          <tr v-for="(player) in players" :key="player.idPlayer">
+          <tr v-for="team in teams" :key="team.idTeam">
             <td>
-              {{ player.nom }}
+              {{ team.nom }}
             </td>
             <td>
-              {{ player.prenom }}
+              {{ team.pays }}
             </td>
             <td>
-              {{ player.age }}
-            </td>
-            <td>
-              {{ player.nationality }}
-            </td>
-            <td>
-              {{ player.image }}
+              {{ team.stade }}
             </td>
               <td>
               <div class="button">
-                <a href="#" class="myButon" v-on:click="modifier(player.idPlayer)">MODIFY</a>
+                <a href="#" class="myButon" v-on:click="modifier(team.idTeam)">MODIFY</a>
               </div>
               </td>
             <td>
 
               <div class="button">
-                <a href="#" class="myButton" v-on:click="supprimer(player.idPlayer)">DELETE</a>
+                <a href="#" class="myButton" v-on:click="supprimer(team.idTeam)">DELETE</a>
               </div>
 
             </td>
@@ -57,32 +50,28 @@
     </body>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 export default {
-  name: "ListeOfPlayers",
+  name: "ListeOfTeams",
   data() {
     return {
-      players: [],
-      url: "http://localhost:8080/api/players",
-      newPlayer: {
+      teams: [],
+      url: "http://localhost:8080/api/teams",
+      newTeams: {
         nom: "none",
-        prenom: "none",
-        age: 0,
-        nationality: "none",
-        image: "none"
-
+        pays: "none",
+        stade: "none"
       }
     };
   },
   methods: {
-    get_players() {
+    get_teams() {
       axios
-          .get("http://localhost:8080/api/players")
+          .get("http://localhost:8080/api/teams")
           .then(response => {
-            this.players = response.data.players;
-            console.log(this.players);
+            this.teams = response.data.teams;
+            console.log(this.teams);
           })
           .catch(error => {
             console.log(error);
@@ -91,10 +80,10 @@ export default {
     supprimer : function(index) {
       console.log("DANS METHODE DELETE APRES CLICK");
       axios
-          .delete("http://localhost:8080/api/players/"+index, index)
+          .delete("http://localhost:8080/api/teams/"+index, index)
           .then(response => {
             console.log(response.data);
-            this.$router.push({ name: 'ListeOfPlayers'});
+            this.$router.push({ name: 'ListeOfTeams'});
           })
           .catch(error => {
             console.log(error);
@@ -102,11 +91,11 @@ export default {
     },
     modifier : function(index) {
       console.log("DANS METHODE MODFIER APRES CLICK:"+index);
-      this.$router.push({ name: 'edit', params: { play: index }});
+      this.$router.push({ name: 'editTeams', params: { team: index }});
     }
   },
   mounted() {
-    this.get_players();
+    this.get_teams();
   }
 }
 </script>
@@ -220,23 +209,15 @@ caption {
     white-space: nowrap;
   }
   td:nth-of-type(1):before {
-    content: "Nom ";
+    content: "Nom";
     font-weight: bold;
   }
   td:nth-of-type(2):before {
-    content: "Prenom";
+    content: "Pays";
     font-weight: bold;
   }
   td:nth-of-type(3):before {
-    content: "Age";
-    font-weight: bold;
-  }
-  td:nth-of-type(4):before {
-    content: "Nationality";
-    font-weight: bold;
-  }
-  td:nth-of-type(5):before {
-    content: "Image";
+    content: "Stade";
     font-weight: bold;
   }
 
