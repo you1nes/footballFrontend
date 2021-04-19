@@ -8,6 +8,8 @@ import addTeams from "@/addTeams";
 import ListeOfTeams from "@/ListeOfTeams";
 import psgPage from "@/psgPage";
 import realMadridPage from "@/realMadridPage";
+import accueil from "@/accueil";
+import editPlayers from "@/EditPlayers";
 
 
 Vue.use(VueRouter)
@@ -49,7 +51,22 @@ component: ListeOfPlayers
         name:"realMadridPage",
         component: realMadridPage
 
+    },
+
+    {
+        path: "/",
+
+        component: accueil
+
+    },
+
+    {
+        path: "/editPlayer",
+        name:"EditPlayers",
+        component: editPlayers
+
     }
+
 
 
 

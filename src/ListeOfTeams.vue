@@ -80,7 +80,7 @@ export default {
     supprimer : function(index) {
       console.log("DANS METHODE DELETE APRES CLICK");
       axios
-          .delete("http://localhost:8080/api/teams/"+index, index)
+          .delete("http://localhost:8080/api/teams/"+index)
           .then(response => {
             console.log(response.data);
             this.$router.push({ name: 'ListeOfTeams'});
@@ -91,7 +91,7 @@ export default {
     },
     modifier : function(index) {
       console.log("DANS METHODE MODFIER APRES CLICK:"+index);
-      this.$router.push({ name: 'editTeams', params: { team: index }});
+      this.$router.push({ name: 'editTeams.vue', params: { team: index }});
     }
   },
   mounted() {

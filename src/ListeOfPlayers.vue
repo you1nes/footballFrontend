@@ -91,7 +91,7 @@ export default {
     supprimer : function(index) {
       console.log("DANS METHODE DELETE APRES CLICK");
       axios
-          .delete("http://localhost:8080/api/players/"+index, index)
+          .delete("http://localhost:8080/api/players/"+index)
           .then(response => {
             console.log(response.data);
             this.$router.push({ name: 'ListeOfPlayers'});
@@ -102,7 +102,7 @@ export default {
     },
     modifier : function(index) {
       console.log("DANS METHODE MODFIER APRES CLICK:"+index);
-      this.$router.push({ name: 'edit', params: { play: index }});
+      this.$router.push({ name: 'EditPlayers', params: { play: index }});
     }
   },
   mounted() {
@@ -113,7 +113,7 @@ export default {
 
 <style>
 table {
-  border: 3px solid #6495ed;
+  border: 3px solid #00675a;
   border-collapse: collapse;
   width: 90%;
   margin: auto;
