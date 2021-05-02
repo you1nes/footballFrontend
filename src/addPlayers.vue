@@ -154,6 +154,8 @@ export default {
           .catch(error => {
             console.log(error);
           });
+      this.$router.push('ListeOfPlayers')
+
     }
   },
   mounted() {
@@ -163,13 +165,3 @@ export default {
 };
 </script>
 
-<style>
-/* #add {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #5bff33;
-  margin-top: 60px;
-}  */
-</style>

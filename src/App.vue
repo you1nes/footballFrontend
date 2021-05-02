@@ -10,7 +10,9 @@
 
         <nav>
           <div class="navstrong">
-
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
             <li>
               <router-link to="/listeOfPlayers">Liste des players</router-link>
             </li>
@@ -51,10 +53,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Passion+One');
+
 * {
   box-sizing: border-box;
   margin-top: 0;
@@ -172,6 +171,7 @@ a {
 #foire {
   background-color: #ffc643;
 }
+
 .main-image {
   background-image: url(./img/wallpaper.png);
   background-repeat: no-repeat;
@@ -334,7 +334,7 @@ footer p, .logos {
     border: rgb(36, 36, 36) 1px solid;
   }
   .header {
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(37, 50, 37);
   }
   #m-dropdown {
     display: none;
@@ -372,6 +372,7 @@ footer p, .logos {
   .header nav li {
     margin: 0 15px 0 0;
   }
+
   .navstrong {
     display: flex;
     color: white;
@@ -400,12 +401,14 @@ footer p, .logos {
     border-radius: 7px;
     font-weight: bolder;
     transition: all 0.25s ease-in-out;
+    background-color: #8c4caf;
+
   }
   .button1 {
-    background-color: #d55c19ed;
+    background-color: #53284f;
   }
   .button2 {
-    background-color: #e98300;
+    background-color: #53284f;
   }
   .button:hover {
     background-color: rgb(49, 49, 49);
@@ -569,7 +572,7 @@ footer p, .logos {
   width: 50%;
   font-size: 1em;
   padding: 8px 20px 10px 20px;
-  background-color: #40a12f;
+  background-color: #2f4ca1;
   color: white;
   font-weight: bolder;
   border-radius: 10px;
@@ -586,21 +589,7 @@ footer p, .logos {
   color: white;
   padding: 0.2px;
 }
-.nom {
-  background-color: #4caf50;
-}
-.age {
-  background-color: rgb(76, 83, 175);
-}
-.poids {
-  background-color: rgb(209, 28, 28);
-}
-.regne {
-  background-color: rgb(12, 20, 95);
-}
-.proprietaire {
-  background-color: rgb(6, 48, 13);
-}
+
 select {
   width: 20%;
   padding: 5px 5px;
@@ -644,3 +633,4 @@ select {
   margin-top: 60px;
 }
 </style>
+

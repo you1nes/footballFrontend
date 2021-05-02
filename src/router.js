@@ -10,6 +10,7 @@ import psgPage from "@/psgPage";
 import realMadridPage from "@/realMadridPage";
 import accueil from "@/accueil";
 import editPlayers from "@/EditPlayers";
+import ValidationPage from "@/ValidationPage";
 
 
 Vue.use(VueRouter)
@@ -57,6 +58,13 @@ component: ListeOfPlayers
         path: "/",
 
         component: accueil
+
+    },
+
+    {
+        path: "/validation",
+        name:"ValidationPage",
+        component: ValidationPage,
 
     },
 

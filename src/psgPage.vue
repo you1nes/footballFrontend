@@ -1,23 +1,26 @@
 
 
 <template>
+
   <div id="psgPage">
     <body>
     <div class="container" id="psgPage">
-      <br />
+
+      <img src="./img/clubPSG.png" class="rounded mx-auto d-block" alt="..."   style="width:700px;height:400px;" >
+      >
+
 
       <div class="main">
         <div class="title">
-          <h2>Listing </h2>
+          <h2>Joueur du PSG </h2>
         </div>
-        <table class="table table-fixed">
+        <table class="table table-hover">
           <thead>
           <tr>
             <th>Nom du player</th>
             <th>Prenom du player</th>
             <th>Age du player </th>
             <th>nationalité </th>
-            <th>image</th>
           </tr>
           </thead>
           <tbody v-for="(player) in players" :key="player.idPlayer">
@@ -35,9 +38,7 @@
             <td>
               {{ player.nationality }}
             </td>
-            <td>
-              {{ player.image }}
-            </td>
+
 
           </tr>
           </tbody>
