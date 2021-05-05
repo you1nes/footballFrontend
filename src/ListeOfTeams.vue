@@ -91,7 +91,7 @@ export default {
     },
     modifier : function(index) {
       console.log("DANS METHODE MODFIER APRES CLICK:"+index);
-      this.$router.push({ name: 'editTeams.vue', params: { team: index }});
+      this.$router.push({ name: 'EditTeams', params: { team: index }});
     }
   },
   mounted() {

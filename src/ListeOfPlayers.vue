@@ -33,16 +33,16 @@
             <td>
               {{ player.nationality }}
             </td>
-            <td
+            <span
 
               v-for="team in teams" :key="team.idTeam"
-              v-bind:value="'' + team.idTeam"
-                v-if="1 === team.idTeam">
-                {{ team.nom }}
+              v-bind:value="'' + team.idTeam">
 
 
-            </td>
+              <td v-if="player.idTeam===team.idTeam">
+                {{team.nom}}</td>
 
+            </span>
               <td>
               <div class="button">
                 <a href="#" class="myButon" v-on:click="modifier(player.idPlayer)">MODIFIER</a>

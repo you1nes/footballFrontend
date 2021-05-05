@@ -11,6 +11,7 @@ import realMadridPage from "@/realMadridPage";
 import accueil from "@/accueil";
 import editPlayers from "@/EditPlayers";
 import ValidationPage from "@/ValidationPage";
+import EditTeam from "@/EditTeams";
 
 
 Vue.use(VueRouter)
@@ -72,6 +73,12 @@ component: ListeOfPlayers
         path: "/editPlayer",
         name:"EditPlayers",
         component: editPlayers
+
+    },
+    {
+        path: "/editTeam",
+        name:"EditTeams",
+        component: EditTeam
 
     }
 

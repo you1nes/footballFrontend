@@ -81,32 +81,12 @@ body {
 .header nav {
   display: none;
 }
-#logo {
-  height: 25px;
-  margin-left: 5px;
-  margin-top: 1px;
-}
-#barmenu {
-  margin-right: 30px;
-}
+
 a {
   text-decoration: none;
   color: inherit;
 }
-#m-dropdown {
-  position: relative;
-}
-#dropdown {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 0px;
-  grid-column-gap: 0px;
-  justify-items: center;
-  position: absolute;
-  width: 100%;
-  top: 57px;
-}
+
 #dropdown li {
   display: inline-block;
   width: 100%;
@@ -116,20 +96,7 @@ a {
   text-transform: uppercase;
   font-size: 1em;
 }
-.dropdown-menu {
-  background-color: rgb(39, 39, 39);
-  color:white;
-}
-.hidden {
-  position: absolute;
-  width: 100%;
-  top: 97px;
-  opacity: 0;
-}
-.expanded {
-  opacity: 1;
-  transition: opacity 0.5s linear;
-}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -145,16 +112,7 @@ a {
   left:0;
   opacity: 1;
 }
-.absolute {
-  position: absolute;
-  z-index: 30;
-  width:100%;
-}
-.sub-header {
-  display: flex;
-  justify-content: center;
-  z-index: 40;
-}
+
 .sub-header a {
   width: 50%;
   display: flex;
@@ -165,12 +123,7 @@ a {
   font-size: 0.95em;
   font-family: 'Source Sans Pro', sans-serif;
 }
-#investe {
-  background-color: tomato;
-}
-#foire {
-  background-color: #ffc643;
-}
+
 
 .main-image {
   background-image: url(./img/wallpaper.png);
@@ -182,7 +135,7 @@ a {
   margin-bottom: 17px;
 }
 .main-image h1 {
-  color: white;
+  color: #0037ff;
   text-transform: uppercase;
   font-weight: bolder;
   font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
@@ -191,23 +144,13 @@ a {
   bottom: 30;
   left: 20;
 }
-.main {
-  background-color:#f6f5f2;
-  padding-bottom: 45px;
-}
-.wrapper {
-  margin: 0 auto;
-  width: 320px;
-}
-.title {
-  padding-top: 30px;
-}
+
 .main h2 {
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
   font-size: x-large;
-  color: rgb(32, 20, 99);
+  color: rgb(20, 90, 99);
   font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
 }
 .main .title:before {
@@ -232,19 +175,7 @@ a {
   text-align: center;
   color: rgba(9, 2, 17, 0.938);
 }
-.grid-container {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "item1 item2"
-    "item3 item4"
-    "item5 item6";
-  grid-row-gap: 25px;
-  grid-column-gap: 45px;
-  justify-items: center;
-}
+
 .grid-container h4 {
   text-align: center;
   text-transform: uppercase;
@@ -256,42 +187,7 @@ a {
 .grid-container img {
   border-radius: 50px;
 }
-.felins {
-  color: #b71234;
-}
-.rongeurs {
-  color: #d55c19;
-}
-.canides {
-  color: #00675a;
-}
-.poissons {
-  color: #53284f;
-}
-.reptiles {
-  color: #55601c;
-}
-.oiseaux {
-  color: #006983;
-}
-.maestro {
-  color: #b71234;
-}
-.mastercard {
-  color: #00675a;
-}
-.visa {
-  color: #d55c19;
-}
-.paypal {
-  color: #006983;
-}
-.tel {
-  color: #53284f;
-}
-.adresse {
-  color: #55601c;
-}
+
 footer {
   background: rgb(43, 43, 43);
   text-transform: uppercase;
@@ -304,16 +200,12 @@ footer {
 footer p {
   margin-left: 30px;
 }
-.logos {
-  margin-right: 30px;
-}
+
 footer p, .logos {
   padding: 40px 0 25px 0;
   font-size: 1.1em;
 }
-.footer-white {
-  color: white;
-}
+
 .logos img {
   height: auto;
   width: 25px;
@@ -334,21 +226,20 @@ footer p, .logos {
     border: rgb(36, 36, 36) 1px solid;
   }
   .header {
-    background-color: rgb(37, 50, 37);
+    background-color: rgb(12, 55, 17);
   }
   #m-dropdown {
     display: none;
   }
   .search img {
     height: auto;
+    height: auto;
     width: 15px;
     position: relative;
     right: 25px;
     top: 3px;
   }
-  .search {
-    margin-right: -19px;
-  }
+
   .search input {
     box-shadow: none;
     border-color: rgb(88, 88, 88);
@@ -389,26 +280,20 @@ footer p, .logos {
     margin: 0 0px 0 0 !important;
     transition: all 0.25s ease-in-out;
   }
-  .navweak {
-    color: grey;
-    transition: background-color 0.3s;
-    padding: 5px 10px;
-    border-radius: 7px;
-    transition: all 0.25s ease-in-out;
-  }
+
   .button {
     padding: 10px 12px;
     border-radius: 7px;
     font-weight: bolder;
     transition: all 0.25s ease-in-out;
-    background-color: #8c4caf;
+    background-color: #af4c6b;
 
   }
   .button1 {
-    background-color: #53284f;
+    background-color: #534728;
   }
   .button2 {
-    background-color: #53284f;
+    background-color: #285329;
   }
   .button:hover {
     background-color: rgb(49, 49, 49);
@@ -419,7 +304,7 @@ footer p, .logos {
   }
   .navstrong li:hover {
     background-color: white;
-    color: rgb(124, 124, 255);
+    color: rgb(255, 124, 144);
   }
   .main-image {
     background-position: center;
@@ -429,25 +314,7 @@ footer p, .logos {
     left: 40px;
     padding-right: 20px;
   }
-  .wrapper {
-    width: 1200px;
-  }
-  .title {
-    font-size: 1.1em;
-  }
-  .highlight {
-    font-family: 'Franklin Gothic Medium', Helvetica, sans-serif;
-    font-size: 1.5em !important;
-  }
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "item1 item2 item3 item4 item5 item6";
-    justify-items: center;
-    padding-top: 30px;
-    padding-bottom: 45px;
-  }
+
   .grid-container a {
     text-align: center;
   }
@@ -554,7 +421,7 @@ footer p, .logos {
 .grid-contact-container .form input, .grid-contact-container .form select {
   margin: 8px 0;
   width: 100%;
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(133, 189, 205);
   border-style: none;
   border-radius: 10px;
   line-height: 2em;
@@ -572,7 +439,7 @@ footer p, .logos {
   width: 50%;
   font-size: 1em;
   padding: 8px 20px 10px 20px;
-  background-color: #2f4ca1;
+  background-color: #3a2fa1;
   color: white;
   font-weight: bolder;
   border-radius: 10px;
@@ -597,30 +464,7 @@ select {
   border-radius: 2px;
   background-color: #f1f1f1;
 }
-/* #app {
- background: url(Background.jpg) no-repeat center top ;
-  background-size: cover;
- font-family: "Avenir", Helvetica, Arial, sans-serif;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- text-align: center;
- color: #000000;
- margin-top: 60px;
-}
-#myHeader {
- font-size: 48px;
- text-shadow: -1px -1px #9df, 1px 1px #49d, -3px 0 4px #000;
- font-family: "Segoe print", Arial, Helvetica, sans-serif;
- color: #6bf;
- padding: 24px 32px 32px 32px;
- font-weight: lighter;
- -moz-box-shadow: 2px 2px 6px #888;
- -webkit-box-shadow: 2px 2px 6px #888;
- box-shadow: 2px 2px 6px #888;
- text-align: center;
- display: inline;
- line-height: 150px;
-}  */
+
 </style>
 
 <style>
